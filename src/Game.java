@@ -29,6 +29,7 @@ public class Game {
 
             switch (menuChoice) {
                 case 1: //Play
+                    player.setScore(0);
                     throwDice();
                     break;
                 case 2: //Highscore

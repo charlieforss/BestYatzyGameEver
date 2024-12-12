@@ -25,7 +25,7 @@ public class Rules {
         setRules(properties.getProperty("rules"));
     }
 
-    public static Rules getRules() {
+    public static Rules getInstance() {
         if (instance == null) {
             instance = new Rules();
         }

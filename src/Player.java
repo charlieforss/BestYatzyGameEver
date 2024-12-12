@@ -4,7 +4,6 @@ public class Player extends Person{
 
     //Den som har hand om färg får bestämma hur man vill ha färger
     private String color;
-    private Color color2;
     private int score;
 
     public int getScore() {
@@ -15,5 +14,12 @@ public class Player extends Person{
         score += addedScore;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 
 }

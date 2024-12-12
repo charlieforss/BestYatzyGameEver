@@ -17,7 +17,11 @@ public class Game {
         player.setName(username);
         showColorOptions();
         int colorOption = scanner.nextInt();
-//        player.setColor(color);
+        switch (colorOption) {
+            case 1: player.setColor("Red"); break;
+            case 2: player.setColor("Green"); break;
+            case 3: player.setColor("Blue"); break;
+        }
 
         while (true) {
             showMenu();
@@ -31,7 +35,7 @@ public class Game {
                     break;
                 case 3: //Rules
                     if (rules == null) {
-                        rules = Rules.getRules();
+                        rules = Rules.getInstance();
                     }
                     rules.printRules();
                     break;
@@ -54,7 +58,7 @@ public class Game {
     private void showColorOptions() {
         System.out.println("""
                 Please choose a color:
-                1. Red 
+                1. Red
                 2. Green
                 3. Blue""");
     }
